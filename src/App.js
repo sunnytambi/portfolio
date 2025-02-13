@@ -4,30 +4,31 @@ import {
   navBar,
   mainBody,
   about,
-  repos,
+  projects,
   leadership,
   skills,
   getInTouch,
   experiences
 } from "./editable-stuff/config.js";
-import MainBody from "./components/home/MainBody";
-import AboutMe from "./components/home/AboutMe";
-import Project from "./components/home/Project";
+import MainBody from "./components/portfolio/MainBody";
+import AboutMe from "./components/portfolio/AboutMe";
+import Project from "./components/portfolio/Project";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import Skills from "./components/home/Skills";
+import Skills from "./components/portfolio/Skills";
 // import { Blog } from "./components/blog/Blog";
 // import BlogPost from "./components/blog/BlogPost";
-import GetInTouch from "./components/home/GetInTouch.jsx";
-import Leadership from "./components/home/Leadership.jsx";
+import GetInTouch from "./components/portfolio/GetInTouch.jsx";
+import Leadership from "./components/portfolio/Leadership.jsx";
 
-import Experience from "./components/home/Experience";
+import Experience from "./components/portfolio/Experience";
 
 const Home = React.forwardRef((props, ref) => {
   return (
     <>
       <MainBody
         gradient={mainBody.gradientColors}
+        pic={mainBody.imageLink}
         title={`${mainBody.firstName} ${mainBody.middleName} ${mainBody.lastName}`}
         message={mainBody.message}
         icons={mainBody.icons}
@@ -47,12 +48,12 @@ const Home = React.forwardRef((props, ref) => {
           <Experience experiences={experiences}/>
         )
       }
-      {repos.show && (
+      {projects.show && (
         <Project
-          heading={repos.heading}
-          username={repos.gitHubUsername}
-          length={repos.reposLength}
-          specfic={repos.specificRepos}
+          heading={projects.heading}
+          username={projects.gitHubUsername}
+          length={projects.reposLength}
+          specfic={projects.specificRepos}
         />
       )}
       {leadership.show && (
@@ -79,7 +80,7 @@ const App = () => {
   const titleRef = React.useRef();
 
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL + "/"}>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       {navBar.show && <Navbar ref={titleRef} />}
       <Routes>
         <Route path="/" exact element={<Home ref={titleRef} />} />
