@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.6162f885.css",
+    "main.js": "/portfolio/static/js/main.98dc95d8.js",
+    "static/js/787.6971d1b3.chunk.js": "/portfolio/static/js/787.6971d1b3.chunk.js",
+    "static/media/Sunny_Profile_pic_gray.png": "/portfolio/static/media/Sunny_Profile_pic_gray.48f428f4fbc1e5e127a3.png",
+    "static/media/Sunny Tambi_Resume.pdf": "/portfolio/static/media/Sunny Tambi_Resume.db6c2659b707e45332b5.pdf",
+    "static/media/talentica.png": "/portfolio/static/media/talentica.2c35cbc3ec7155734c51.png",
+    "static/media/ubisoft.png": "/portfolio/static/media/ubisoft.db714b624c4f46e0e242.png",
+    "index.html": "/portfolio/index.html",
+    "main.6162f885.css.map": "/portfolio/static/css/main.6162f885.css.map",
+    "main.98dc95d8.js.map": "/portfolio/static/js/main.98dc95d8.js.map",
+    "787.6971d1b3.chunk.js.map": "/portfolio/static/js/787.6971d1b3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6162f885.css",
+    "static/js/main.98dc95d8.js"
+  ]
+}
