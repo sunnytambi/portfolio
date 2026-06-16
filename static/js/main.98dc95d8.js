@@ -11773,7 +11773,7 @@
           show: !0,
           heading: "Get In Touch",
           message:
-            "I help organizations achieve their business goals of Agentic Transformation, New Product Launches, \n    Fostering Innovation and Expand Market Reach via my skills of technology leadership, \n    scaled product development, high performance team development and AI/ML product lifecycle management.\n    Feel free to email me at"
+            "I help organizations achieve their business goals of Agentic Transformation, New Product Launches, \n    Fostering Innovation and Expand Market Reach via my skills of technology leadership, \n    scaled product development, high performance team development and AI/ML product lifecycle management.\n    Feel free to email me at",
           email: "sunnytambi@gmail.com",
         },
         he = {
