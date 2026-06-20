@@ -232,7 +232,7 @@ function Portfolio() {
               <Sparkles className="h-5 w-5 text-gold" />
               <blockquote className="mt-4 font-display text-xl italic leading-snug text-foreground md:text-2xl">
                 "Sunny was the most hands-on Senior Leader I have come across. Leaders over time lose
-                touch with their programming roots. Not Sunny."
+                touch with their programming roots. Not Sunny. Very entrepreneurial by nature. It was a pleasure working with him."
               </blockquote>
               <figcaption className="mt-6 text-sm text-muted-foreground">
                 — Dr. Vishnu Ramchandran<br />
