@@ -5,12 +5,49 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Sunny Tambi — Director of Engineering, AI & Agentic Solutions" },
-      { name: "description", content: "20+ years building Agentic AI products, scaling startups, and leading high-performance engineering teams. Portfolio of Sunny Tambi, Director of Engineering based in Pune, India." },
-      { property: "og:title", content: "Sunny Tambi — Director of Engineering" },
-      { property: "og:description", content: "Technology leader in AI & Agentic Solutions. 20+ years helping organizations ship products and scale revenue up to $255M." },
-      { property: "og:type", content: "website" },
+      {
+        name: "description",
+        content:
+          "Sunny Tambi — Director of Engineering with 20+ years building Agentic AI products, scaling startups to $255M revenue, and leading high-performance engineering teams across fintech, agritech, healthcare and SaaS.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Sunny Tambi, Director of Engineering, Fractional CTO, Agentic AI, RAG, LLM, Engineering Leadership, Board Advisor, Pune, India",
+      },
+      { name: "author", content: "Sunny Tambi" },
+      { name: "robots", content: "index, follow" },
+
+      // Open Graph
+      { property: "og:title", content: "Sunny Tambi — Director of Engineering, AI & Agentic Solutions" },
+      {
+        property: "og:description",
+        content:
+          "20+ years shipping products concept-to-market. Agentic AI Suite launched in 3 months, RAG relevancy 53%→87%, revenue uplift up to $255M.",
+      },
+      { property: "og:type", content: "profile" },
+      { property: "og:site_name", content: "Sunny Tambi Portfolio" },
+      { property: "og:url", content: "/" },
+      { property: "profile:first_name", content: "Sunny" },
+      { property: "profile:last_name", content: "Tambi" },
+
+      // Twitter
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Sunny Tambi — Director of Engineering" },
+      {
+        name: "twitter:description",
+        content:
+          "Technology leader in AI & Agentic Solutions. Available for Senior Technical Leadership, Board advisory & Fractional CTO engagements.",
+      },
+
+      // Section-level discoverability via meta name (section anchors)
+      { name: "section:about", content: "About Sunny Tambi — hands-on senior leader bridging engineering execution and product strategy." },
+      { name: "section:experience", content: "Experience — Director of Engineering roles across Grazitti (SearchUnify), Syngenta, Rubix, Talentica, Infosys EdgeVerve, Ubisoft and TCS." },
+      { name: "section:skills", content: "Skills — Agentic Applications, MCPs, RAG & Search, LLM Guardrails, Java, Node.js, Python, React, AWS/Azure/GCP, Leadership." },
+      { name: "section:contact", content: "Contact Sunny Tambi — sunnytambi@gmail.com, +91 86059 41979, based in Pune, India." },
     ],
     links: [
+      { rel: "canonical", href: "/" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -18,9 +55,46 @@ export const Route = createFileRoute("/")({
         href: "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap",
       },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Sunny Tambi",
+          jobTitle: "Director of Engineering",
+          description:
+            "Technology leader with 20+ years building Agentic AI products and scaling engineering teams.",
+          email: "mailto:sunnytambi@gmail.com",
+          telephone: "+91-86059-41979",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Pune",
+            addressCountry: "IN",
+          },
+          sameAs: [
+            "https://www.linkedin.com/in/sunnytambi",
+            "https://github.com/sunnytambi",
+          ],
+          knowsAbout: [
+            "Agentic AI",
+            "RAG",
+            "LLM Guardrails",
+            "Engineering Leadership",
+            "Fractional CTO",
+            "Product Strategy",
+          ],
+          alumniOf: {
+            "@type": "CollegeOrUniversity",
+            name: "Malaviya National Institute of Technology, Jaipur",
+          },
+        }),
+      },
+    ],
   }),
   component: Portfolio,
 });
+
 
 const experiences = [
   {
