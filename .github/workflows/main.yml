@@ -1,0 +1,28 @@
+name: Sync Upstream
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout downstream repo
+        uses: actions/checkout@v4
+        with:
+          repository: sunnytambi/portfolio
+          ref: master
+          token: ${{ secrets.SYNC_TOKEN }}
+
+      - name: Add upstream and sync
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          git remote add upstream https://${{ secrets.SYNC_TOKEN }}@github.com/sunnytambi/sunny-s-portfolio.git
+          git fetch upstream main
+          git merge upstream/main --allow-unrelated-histories --no-edit 
+          git push origin master
