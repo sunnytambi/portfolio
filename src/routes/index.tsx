@@ -136,24 +136,26 @@ const metrics = [
 
 function Portfolio() {
   return (
-    <div className="grain relative min-h-screen overflow-hidden">
+    <div className="grain relative min-h-screen overflow-x-clip pt-[82px]">
       {/* NAV */}
-      <header className="sticky top-0 z-50 mx-auto flex max-w-6xl items-center justify-between px-6 py-6 backdrop-blur-md">
-        <a href="#top" className="font-display text-xl tracking-tight">
-          Sunny <span className="text-gold">Tambi</span>
-        </a>
-        <nav className="hidden gap-8 text-sm text-muted-foreground md:flex">
-          <a href="#about" className="hover:text-foreground transition-colors">About</a>
-          <a href="#experience" className="hover:text-foreground transition-colors">Experience</a>
-          <a href="#skills" className="hover:text-foreground transition-colors">Skills</a>
-          <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
-        </nav>
-        <a
-          href="mailto:sunnytambi@gmail.com"
-          className="hidden items-center gap-2 rounded-full border border-border bg-card/40 px-4 py-2 text-sm backdrop-blur transition-colors hover:border-gold hover:text-gold md:inline-flex"
-        >
-          Get in touch <ArrowUpRight className="h-3.5 w-3.5" />
-        </a>
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+          <a href="#top" className="font-display text-xl tracking-tight">
+            Sunny <span className="text-gold">Tambi</span>
+          </a>
+          <nav className="hidden gap-8 text-sm text-muted-foreground md:flex">
+            <a href="#about" className="transition-colors hover:text-foreground">About</a>
+            <a href="#experience" className="transition-colors hover:text-foreground">Experience</a>
+            <a href="#skills" className="transition-colors hover:text-foreground">Skills</a>
+            <a href="#contact" className="transition-colors hover:text-foreground">Contact</a>
+          </nav>
+          <a
+            href="mailto:sunnytambi@gmail.com"
+            className="hidden items-center gap-2 rounded-full border border-border bg-card/40 px-4 py-2 text-sm backdrop-blur transition-colors hover:border-gold hover:text-gold md:inline-flex"
+          >
+            Get in touch <ArrowUpRight className="h-3.5 w-3.5" />
+          </a>
+        </div>
       </header>
 
       {/* HERO */}
