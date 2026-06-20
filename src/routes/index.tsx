@@ -138,7 +138,7 @@ function Portfolio() {
   return (
     <div className="grain relative min-h-screen overflow-hidden">
       {/* NAV */}
-      <header className="relative z-10 mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
+      <header className="sticky top-0 z-50 mx-auto flex max-w-6xl items-center justify-between px-6 py-6 backdrop-blur-md">
         <a href="#top" className="font-display text-xl tracking-tight">
           Sunny <span className="text-gold">Tambi</span>
         </a>
