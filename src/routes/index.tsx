@@ -165,7 +165,7 @@ function Portfolio() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gold opacity-60"></span>
             <span className="relative inline-flex h-2 w-2 rounded-full bg-gold"></span>
           </span>
-          Available for board advisory & fractional CTO engagements
+          Available for Senior Technical Leadership, Board advisory & Fractional CTO engagements
         </div>
 
         <h1 className="font-display text-5xl leading-[1.05] tracking-tight md:text-7xl lg:text-[5.5rem]">
