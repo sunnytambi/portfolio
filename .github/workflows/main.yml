@@ -10,20 +10,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Sync repo to repo
-        uses: Jooho/sync-upstream-repo@1.0.0
+      - name: Checkout downstream repo
+        uses: actions/checkout@v4
         with:
-          upstream_repo: https://github.com/sunnytambi/sunny-s-portfolio.git
-          upstream_branch: main
-
-          downstream_repo: https://github.com/sunnytambi/portfolio.git
-          downstream_branch: master
-
+          repository: sunnytambi/portfolio
+          ref: master
           token: ${{ secrets.SYNC_TOKEN }}
 
-          # Optional
-          fetch_args: ""
-          merge_args: ""
-          push_args: ""
-          spawn_logs: "true"
-          branch_prefix: ""
+      - name: Add upstream and sync
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          git remote add upstream https://${{ secrets.SYNC_TOKEN }}@github.com/sunnytambi/sunny-s-portfolio.git
+          git fetch upstream main
+          git merge upstream/main --no-edit
+          git push origin master
