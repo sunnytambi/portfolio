@@ -136,9 +136,9 @@ const metrics = [
 
 function Portfolio() {
   return (
-    <div className="grain relative min-h-screen overflow-x-clip">
+    <div className="grain relative min-h-screen overflow-x-clip pt-[82px]">
       {/* NAV */}
-      <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
           <a href="#top" className="font-display text-xl tracking-tight">
             Sunny <span className="text-gold">Tambi</span>
