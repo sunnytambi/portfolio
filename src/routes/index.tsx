@@ -131,7 +131,7 @@ const metrics = [
   { value: "20+", label: "Years in tech leadership" },
   { value: "$255M", label: "Revenue uplift driven" },
   { value: "6+", label: "Startups scaled to MVP" },
-  { value: "87%", label: "RAG relevancy achieved" },
+  { value: "5+", label: "AI Agents deployed on Production" },
 ];
 
 function Portfolio() {
